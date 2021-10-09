@@ -42,7 +42,9 @@ CREATE TABLE notas (
   descripcion VARCHAR(100) not null,
   eliminar INT NOT NULL DEFAULT 1,
   id_usuario INT NULL,
-  id_categoria INT NULL);
+  id_categoria INT NULL,
+  --CONSTRAINT `id_usuarios` FOREIGN KEY (`id_usuario`) REFERENCES `usuarios` (`id`));
+  --CONSTRAINT `id_categorias` FOREIGN KEY (`id_categoria`) REFERENCES `categorias` (`id`));
   
 INSERT INTO notas (titulo,descripcion,id_usuario,id_categoria) values ("Nota 1","Descripcion nota 1",1,5);
 INSERT INTO notas (titulo,descripcion,id_usuario,id_categoria) values ("Nota 2","Descripcion nota 2",2,6);
